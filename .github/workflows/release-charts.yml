@@ -26,6 +26,9 @@ jobs:
         with:
           version: v3.4.0
 
+      - name: Configure Helm
+        run: helm repo add localpv https://openebs.github.io/dynamic-localpv-provisioner
+
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.1.0
         env:
