@@ -171,7 +171,7 @@ csiNode:
   # access to the host's PID namespace to discover the daemon.
   hostPID: false
   # iscsiadm is used by Jiva to manage iSCSI targets. If the iscsiadm utility is setup
-  # elsewhere, iscsiadmConfig can accept a shell script to handle locating the context
+  # elsewhere, iscsiadmConfig can set as a shell script to handle locating the context
   # of the daemon and the CLI.
   iscsiadmConfig: null
 
