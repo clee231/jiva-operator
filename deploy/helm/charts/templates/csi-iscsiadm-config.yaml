@@ -5,7 +5,7 @@ metadata:
 data:
   iscsiadm: |
 {{ if .Values.csiNode.iscsiadmConfig }}
-{{ indent 4 .Values.csiNode.iscsiadmConfig }}
+{{- indent 4 .Values.csiNode.iscsiadmConfig }}
 {{ else }}
     #!/bin/sh
     if [ -x /host/sbin/iscsiadm ]; then
