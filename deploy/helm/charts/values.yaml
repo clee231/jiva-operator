@@ -166,6 +166,14 @@ csiNode:
   nodeSelector: {}
   tolerations: []
   securityContext: {}
+  # Jiva assumes iscisd is running natively on the host. If this daemon is run elsewhere,
+  # like in a Talos extension service, hostPID may need to be set to true to allow
+  # access to the host's PID namespace to discover the daemon.
+  hostPID: false
+  # iscsiadm is used by Jiva to manage iSCSI targets. If the iscsiadm utility is setup
+  # elsewhere, iscsiadmConfig can accept a shell script to handle locating the context
+  # of the daemon and the CLI.
+  iscsiadmConfig: null
 
 csiDriver:
   create: true
